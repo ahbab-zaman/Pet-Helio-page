@@ -21,23 +21,28 @@
   height: 28px;
 }
 .pet-cart-left {
-  max-width: 80%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   gap: 21px;
+  justify-content:center;
   margin-top: 51px;
 }
-.pet-banner {
-  width: 598px;
-  height: 536px;
-  margin-bottom: 15px;
+.pet-banner-image{
+  width: 600px;
+}
+.all-pets {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .pet-images {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.pet-image {
+.pet-image{
   width: 137px;
   height: 137px;
 }
@@ -147,41 +152,70 @@
   width: 30.02px;
   height: 29.4px;
   background-color: #f7f7fb;
-  color: #141B4D;
+  color: #141b4d;
   font-weight: 600;
   font-size: 18px;
   border: none;
   border-radius: 50%;
 }
-.value{
-  color: #141B4D;
+.value {
+  color: #141b4d;
   font-size: 500;
   font-size: 30px;
 }
-.payment-cards{
+.payment-cards {
   display: flex;
   align-items: center;
   gap: 3px;
   margin-top: 18px;
 }
-.service-1{
+.service-1 {
   display: flex;
-  color: #7D7D7D;
+  color: #7d7d7d;
   font-size: 15px;
   margin-top: 15px;
 }
-.blue{
-  color: #3385FF;
+.blue {
+  color: #3385ff;
   font-size: 500;
 }
-.carbon{
+.carbon {
   width: 19px;
   height: 18px;
   margin-right: 4px;
 }
-.carbon-check{
+.carbon-check {
   margin-top: 15px;
 }
 
-
 /* Media Queries */
+/* small device */
+@media screen and (max-width: 600px) {
+  .pet-cart-left {
+    width: 100%;
+  }
+  .pet-banner{
+    width: 50%;
+    margin: 0 auto 0 0;
+  }
+  .pet-images{
+    width: 50%;
+  }
+  .pet-banner-image{
+    width: 292px;
+  }
+  .pet-banner-image{
+    width: 67px;
+    height: 67px;
+  }
+  .pet-cart-left {
+    flex-direction: column;
+  }
+  .all-pets {
+    flex-direction: row-reverse;
+  }
+  .pet-images {
+    flex-direction: column;
+  }
+
+}
