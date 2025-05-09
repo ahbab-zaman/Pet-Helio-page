@@ -20,6 +20,14 @@ const totalPriceElement = document.querySelector(".total-price");
 const basePriceElement = document.querySelector(".base-price");
 const discountPriceElement = document.querySelector(".discount-price");
 
+const hamburger = document.querySelector(".hamburger");
+const sidebar = document.querySelector(".sidebar");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  sidebar.classList.toggle("active");
+});
+
 // Function to save cart to local storage
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
